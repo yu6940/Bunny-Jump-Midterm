@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Platform/moving_platform.gd" type="Script" id=1]
+[ext_resource path="res://GFX/Environment/ground_cake.png" type="Texture" id=2]
+
+[node name="moving_platform" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="platform" type="RigidBody2D" parent="."]
+mode = 3
+
+[node name="Sprite" type="Sprite" parent="platform"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platform"]
+position = Vector2( 2.14339, 0 )
+scale = Vector2( 2.1556, 2.08 )
+polygon = PoolVector2Array( -88, -24, 88, -24, 88, 24, -88, 24 )

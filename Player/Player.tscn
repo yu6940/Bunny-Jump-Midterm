@@ -1,0 +1,108 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://GFX/Players/bunny1_stand.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Players/bunny1_ready.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Players/bunny1_jump.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Players/bunny1_walk1.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Players/bunny1_walk2.png" type="Texture" id=6]
+[ext_resource path="res://SFX/jump1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Background/bg_layer2.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Background/bg_layer3.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Background/bg_layer4.png" type="Texture" id=11]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 67.2447
+height = 66.0609
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 468.381, 312.209 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2.22677 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.3, 1.3 )
+smoothing_enabled = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+offset = Vector2( 0, -80 )
+scale = Vector2( 0.5, 0.5 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 0, -80 )
+scroll_ignore_camera_zoom = true
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+modulate = Color( 0.678431, 0.933333, 0.984314, 1 )
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Cloud" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Cloud"]
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Hiils" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+modulate = Color( 0.913725, 0.858824, 0.662745, 1 )
+position = Vector2( 0, 300 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Hiils"]
+modulate = Color( 0.968627, 0.823529, 0.639216, 1 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+modulate = Color( 1, 0.956863, 0.752941, 1 )
+position = Vector2( 0, 500 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Trees"]
+modulate = Color( 0.968627, 0.823529, 0.639216, 1 )
+texture = ExtResource( 11 )
+centered = false

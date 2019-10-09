@@ -1,0 +1,321 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://GFX/Tiles/cake.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Tiles/cakeCenter.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Tiles/cakeCliffLeft.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Tiles/cakeCliffLeftAlt.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Tiles/cakeCliffRight.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Tiles/cakeCliffRightAlt.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Tiles/cakeHalf.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Tiles/cakeHalfAlt.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Tiles/cakeHalfAltLeft.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Tiles/cakeHalfAltMid.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Tiles/cakeHalfAltRight.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Tiles/cakeHalfLeft.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Tiles/cakeHalfMid.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Tiles/cakeHalfRight.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Tiles/cakeHillLeft2.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Tiles/cakeHillLeft.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Tiles/cakeHillRight2.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Tiles/cakeHillRight.png" type="Texture" id=18]
+[ext_resource path="res://GFX/Tiles/cakeLeft.png" type="Texture" id=19]
+[ext_resource path="res://GFX/Tiles/cakeMid.png" type="Texture" id=20]
+[ext_resource path="res://GFX/Tiles/cakeRight.png" type="Texture" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 36.3958, 35.3011 )
+
+[node name="Node" type="Node"]
+
+[node name="cake1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 50, 50 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake1"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake1/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 150, 50 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake2"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 250, 50 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake3"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 350, 50 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake4"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 450, 50 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake5"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 50, 150 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake6"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake6/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake7" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 150, 150 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake7"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake7/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake8" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 250, 150 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake8"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake8/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake9" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 350, 150 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake9"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake9/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake10" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 450, 150 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake10"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake10/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake11" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 50, 250 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake11"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake11/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake12" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 150, 250 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake12"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake12/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake13" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 250, 250 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake13"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake13/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake14" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 350, 250 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake14"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake14/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake15" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 450, 250 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake15"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake15/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake16" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 50, 350 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake16"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cake16/StaticBody2D"]
+polygon = PoolVector2Array( 34.9298, -34.7553, 34.9298, 34.8249, -34.8253, 34.8249 )
+
+[node name="cake17" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 150, 350 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake17"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake17/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake18" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 250, 350 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake18"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cake18/StaticBody2D"]
+polygon = PoolVector2Array( -35.2872, -34.5595, -35.1124, 34.8458, 34.293, 35.0207 )
+
+[node name="cake19" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 350, 350 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake19"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake19/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake20" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 450, 350 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake20"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake20/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="cake21" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 50, 450 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cake21"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake21/StaticBody2D"]
+shape = SubResource( 1 )
