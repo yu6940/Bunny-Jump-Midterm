@@ -64,5 +64,6 @@ func JUMP():
 		
 	#else:
 		#motion.y = 700 #ไม่จำเป็นต้องใสelse่ เพราะมีmotion.yข้างบนแล้ว
-	
-	
+func _on_Carrot_The_Win_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene("res://GFX/Menu/End.tscn")
